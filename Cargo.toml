@@ -1,0 +1,18 @@
+[package]
+name = "kseqi-desktop"
+version = "0.1.0"
+authors = ["wzhd <wzhd@ustc.edu>"]
+edition = "2021"
+default-run = "kseqi"
+
+[dependencies]
+x11-dl = "2.19"
+log="0.4"
+nom = { version = "7", default-features = false, features = ["alloc"] }
+mio = { version = "0.8", features = ["os-ext"] }
+env_logger = { version = "0.10", default-features = false, features = ["color"] }
+libc = "0.2"
+
+[profile.release]
+opt-level = 's'
+strip = "debuginfo"
