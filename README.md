@@ -39,5 +39,9 @@ Available as binary releases for Linux (X11) users:
 Alternatively, build from source with [cargo](https://rustup.rs/),
 compilation takes 25s on Chromebook 2013.
 
-Run the binary to try it out.
+```
+cargo install --git https://github.com/wzhd/kseqi
+```
+
+Run the binary `kseqi` to try it out.
 Or customize the [configuration file](https://github.com/wzhd/kseqi/blob/main/configuration.md).
