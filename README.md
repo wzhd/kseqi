@@ -1,5 +1,7 @@
 ## Hotkey daemon with high degree of freedom
 
+[![CI](https://github.com/wzhd/kseqi/actions/workflows/bui.yml/badge.svg)](https://github.com/wzhd/kseqi/actions)
+
 This program doesn't limit you to the
 typical keyboard combinations, which requires
 modifier(s) plus one letter key, like `Ctrl` and `X`.
