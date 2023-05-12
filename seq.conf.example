@@ -1,0 +1,42 @@
+F↘ N↘ N↗ F↗ = text "function "  # "↘" and "↗" are optional
+P↘ R↘ R↗ P↗ = text "printf();", key left, key left
+R↘ N↘ N↗ R↗ = text "return "
+
+# shortcut using modifiers
+Shift_L Control_L Control_L Shift_L = text "systemctl "
+
+# exit vim
+V↘ Q↘ Q↗ V↗ = key esc, text ":wq", key enter
+
+# mouse click
+M↘ 1↘ 1↗ M↗ = mouse 1 # left click
+
+
+# not ascii
+A↘ E↘ E↗ A↗ = text "ä"
+M↘ U↘ U↗ M↗ = text "μ"
+P↘ I↘ I↗ P↗ = text "π"
+n f n f = text "∞"
+t m t m = text "™"
+q m q m = text "¿"
+s q q s = text "²" # squared
+g f g f = text "😀" # GRINNING FACE U+1F600
+
+N↘  T↘ T↗  N↗ = key ctrl+t
+
+R↘ 6↘ 6↗ R↗ = repeat 6 # repeat last action six more times
+
+
+F↘I↘  F↗R↘  I↗R↗ = exec firefox
+E↘M↘  E↗C↘  M↗C↗ = exec emacsclient -c --alternate-editor ""
+
+I↘S I↗N S↗N = text "一緒に"
+K↘ S↘  K↗K↘  S↗ K↗ = text "奇跡"
+T N T S N S = text "楽し"
+a l l p p a = text "α"
+o m o g m g = text "ω"
+l m l d m d = text "λ"
+d l d t l t  = text "Δ"
+s i s g i g = text "σ"
+
+s t s a t a  = text "⭐"
