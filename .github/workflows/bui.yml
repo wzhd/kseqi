@@ -1,0 +1,30 @@
+name: build
+run-name: ${{ github.actor }} is building
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron:  "30 9 * * 6"
+env:
+  CARGO_TERM_COLOR: always
+permissions:
+  contents: write
+jobs:
+  BuildBin:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: dtolnay/rust-toolchain@stable
+      - run: echo "🎉 triggered by a ${{ github.event_name }} event"
+      - run: echo "🐧 running on a ${{ runner.os }} server"
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Build
+        run: cargo build --release
+      - run: |
+          gh release create ${{ github.run_number }} target/release/kseqi
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell:
+          bash
+      - run: echo "🍏 result ${{ job.status }}."
+
